@@ -4,6 +4,7 @@
     --brand-color: #2196f3;
     --off-color: #f5f4fa;
     --background-color1: #2f303a;
+    --icon-color: #afb1b8;
 }
 /* style globalne */
 body {
@@ -95,7 +96,7 @@ img {
     display: flex;
     align-items: center;
 
-    padding: 32px 0;
+    padding: 30px 0;
     gap: 50px;
 }
 .contact {
@@ -106,14 +107,39 @@ img {
     font-size: 14px;
     line-height: 1.17;
 }
+
+.icon-mail {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-right: 8px;
+}
+
+.icon-tel {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-right: 8px;
+}
 .contact:hover,
 .contact:focus {
     color: var(--brand-color);
+    fill: var(--brand-color);
 }
 
 /* style w main index.html*/
 .solutions {
     background-color: var(--background-color1);
+    background-image: linear-gradient(
+            to bottom,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,17 +196,27 @@ img {
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
+
+.icon-offer {
+    width: 270px;
+    height: 120px;
+    padding: 25px 0;
+    background-color: var(--off-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
 .introduce {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
 }
 .our-services {
     display: flex;
     gap: 30px;
-    padding: 50px 0 94px;
+    padding-bottom: 94px;
 }
 .crew {
     background-color: #f5f4fa;
@@ -199,6 +235,25 @@ img {
     flex-direction: column;
     gap: 10px;
 }
+.icon-member {
+    height: 44px;
+    width: 44px;
+    fill: var(--icon-color);
+    padding: 12px 0;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    min-width: 182px;
+    gap: 10px;
+}
+.icon-member:hover,
+.icon-member:focus {
+    background-color: var(--brand-color);
+    border-radius: 50%;
+    fill: #fff;
+    cursor: pointer;
+}
 .name {
     color: var(--font-color1);
     font-weight: 500;
@@ -214,6 +269,30 @@ img {
     font-size: 16px;
     line-height: 1.19;
 }
+.our-customers {
+    padding: 94px 0;
+}
+.customers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.icon-customer {
+    width: 170px;
+    height: 92px;
+    fill: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    /* padding: 20px; */
+}
+.icon-customer:hover,
+.icon-customer:focus {
+    fill: var(--brand-color);
+    cursor: pointer;
+    border: 1px solid var(--brand-color);
+}
+
 /* style w main portfolio.html */
 .section {
     padding-top: 94px;
@@ -242,11 +321,22 @@ img {
     border-color: var(--brand-color);
     color: #fff;
     cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .services {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+}
+.service-box:hover,
+.service-box:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.box-member {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .decoration {
     border: 1px solid #eeeeee;
@@ -256,6 +346,7 @@ img {
     align-items: center;
     gap: 4px;
 }
+
 .project-name {
     color: var(--font-color1);
     font-weight: 700;
@@ -269,6 +360,15 @@ img {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer-elements {
+    max-width: 1200px;
+    display: flex;
+    gap: 65px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .white {
     color: #fff;
     font-weight: 700;
@@ -290,7 +390,28 @@ img {
     gap: 9px;
     margin-top: 20px;
 }
-
+.join-us {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #fff;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+.icon-footer {
+    height: 44px;
+    width: 44px;
+    fill: #fff;
+    padding: 12px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin: 5px;
+}
+.icon-footer:hover,
+.icon-footer:focus {
+    background-color: var(--brand-color);
+}
 .contact-footer {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
