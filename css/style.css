@@ -109,16 +109,12 @@ img {
 }
 
 .icon-mail {
-    width: 1em;
-    height: 1em;
     vertical-align: middle;
     fill: currentColor;
     margin-right: 8px;
 }
 
 .icon-tel {
-    width: 1em;
-    height: 1em;
     vertical-align: middle;
     fill: currentColor;
     margin-right: 8px;
@@ -235,24 +231,32 @@ img {
     flex-direction: column;
     gap: 10px;
 }
-.icon-member {
-    height: 44px;
-    width: 44px;
-    fill: var(--icon-color);
-    padding: 12px 0;
-}
+
 .icons {
     display: flex;
     flex-direction: row;
     min-width: 182px;
     gap: 10px;
 }
-.icon-member:hover,
-.icon-member:focus {
-    background-color: var(--brand-color);
+
+.icon-social {
+    padding: 12px;
     border-radius: 50%;
-    fill: #fff;
-    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+}
+.icon-social > svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-color);
+}
+.icon-social:is(:hover, :focus) {
+    background-color: var(--brand-color);
+}
+
+.icon-social:is(:hover, :focus) > svg {
+    fill: white;
 }
 .name {
     color: var(--font-color1);
@@ -284,7 +288,6 @@ img {
     fill: var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    /* padding: 20px; */
 }
 .icon-customer:hover,
 .icon-customer:focus {
@@ -399,15 +402,25 @@ img {
     margin-left: 5px;
     margin-bottom: 20px;
 }
+.icons-join-us {
+    display: flex;
+}
 .icon-footer {
     height: 44px;
     width: 44px;
-    fill: #fff;
-    padding: 12px 0;
+
+    padding: 12px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    margin: 5px;
+    display: flex;
+    margin: 0 5px;
 }
+.icon-footer > svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
 .icon-footer:hover,
 .icon-footer:focus {
     background-color: var(--brand-color);
